@@ -9,6 +9,7 @@ import { BsHouseDoor } from 'react-icons/bs'
 import { logout } from '../../redux/authSlice'
 import { request } from '../../util/fetchAPI'
 
+
 const Navbar = () => {
   const [state, setState] = useState({})
   const [photo, setPhoto] = useState(null)
@@ -29,6 +30,14 @@ const Navbar = () => {
   const scrollToTop = () => {
     window.scrollTo(0, 0)
   }
+
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: 'smooth',
+    });
+  }
+  
 
   const handleLogout = () => {
     dispatch(logout())
@@ -84,22 +93,27 @@ const Navbar = () => {
 
 
   return (
+    <div>
+
     <div className={`${classes.container} ${isScrolled && classes.scrolled}`}>
+    
       <div className={classes.wrapper}>
+      <h1 >PK</h1>
         <Link to='/' onClick={scrollToTop} className={classes.left}>
           Real Estate <BsHouseDoor />
         </Link>
+        
         <ul className={classes.center}>
           <li onClick={scrollToTop} className={classes.listItem}>
-            Home
+            <Link to ="/">Home</Link>
           </li>
-          <li className={classes.listItem}>
+          {/* <li className={classes.listItem} onClick={scrollToBottom} >
             About
-          </li>
+          </li> */}
           {/* <li className={classes.listItem}>
             Featured
           </li> */}
-          <li className={classes.listItem}>
+          <li className={classes.listItem} onClick={scrollToBottom}>
             Contacts
           </li>
         </ul>
@@ -214,6 +228,7 @@ const Navbar = () => {
           {!showMobileNav && <GiHamburgerMenu onClick={() => setShowMobileNav(prev => !prev)} className={classes.hamburgerIcon} />}
         </div>
       }
+    </div>
     </div>
   )
 }
