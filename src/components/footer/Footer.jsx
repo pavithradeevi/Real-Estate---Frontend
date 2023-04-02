@@ -13,15 +13,16 @@ const Footer = () => {
         </div>
         <div className={classes.col}>
           <h2>Contacts</h2>
-          <span>Phone:987654321</span>
           
-          <span>GitHub: pavithra kamalakkannan</span>
+        
+          <span>GitHub : <a href="https://github.com/pavithradeevi" target="_blank" >Pavithra Kamalakkannan</a> </span>
+          <span>LinkedIn : <a href="https://www.linkedin.com/in/pavithra-venket-148533263/">Pavithra</a></span>
         </div>
         <div className={classes.col}>
           <h2>Location</h2>
           
           
-          <span>Current Location: India</span>
+          <span>Current Location: India,Bangalore-560094</span>
         </div>
       </div>
     </footer>

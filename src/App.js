@@ -22,10 +22,11 @@ function App() {
   }, [url])
 
   return (
-    <div>
+    <div style={{ backgroundImage:`url("https://fadarwanda.org/wp-content/uploads/2019/09/Background-opera-speeddials-community-web-simple-backgrounds.jpg?w=640")`}}>
       <Routes>
         <Route path='/' element={
           user
+          
             ?
             <>
               <Navbar />

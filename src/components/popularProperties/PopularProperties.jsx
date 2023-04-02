@@ -16,17 +16,17 @@ const PopularProperties = () => {
             <div className={classes.properties}>
                 <Link to={`/properties?type=beach&continent=0&priceRange=1`} className={classes.property}>
                   <img src={img1} />
-                  <div className={classes.quantity}>5 properties</div>
+                  <div className={classes.quantity}>3 properties</div>
                   <h5>Beach properties</h5>
                 </Link>
                 <Link to={`/properties?type=mountain&continent=1&priceRange=1`} className={classes.property}>
                   <img src={img2} />
-                  <div className={classes.quantity}>6 properties</div>
+                  <div className={classes.quantity}>2 properties</div>
                   <h5>Mountain properties</h5>
                 </Link>
                 <Link to={`/properties?type=village&continent=2&priceRange=1`} className={classes.property}>
                   <img src={img3} />
-                  <div className={classes.quantity}>7 properties</div>
+                  <div className={classes.quantity}>2 properties</div>
                   <h5>Village properties</h5>
                 </Link>
             </div>
